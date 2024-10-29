@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TheMoneyConverter</string>
+    <string name="str_convert_amount">Convert amount...</string>
+    <string name="convert_title">convert</string>
+    <string name="convert_to_title">to</string>
+    <string name="test_symbol">VND</string>
+</resources>

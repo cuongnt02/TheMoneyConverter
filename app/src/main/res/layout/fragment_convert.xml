@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="120dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:text="@string/convert_title"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/rubik"
+        app:layout_constraintBottom_toTopOf="@id/container_currency"
+        app:layout_constraintStart_toStartOf="@id/container_currency" />
+
+    <LinearLayout
+        android:id="@+id/container_currency"
+        android:layout_width="320dp"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="10dp"
+        android:background="@drawable/edittext_bg"
+        >
+
+        <LinearLayout
+            android:id="@+id/button_select_symbol_from"
+            android:layout_width="80dp"
+            android:layout_height="52dp"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:foreground="@drawable/select_btn_ripple"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_convert_from"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:text="@string/test_symbol"
+                android:fontFamily="@font/rubik"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                />
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="52dp"
+                android:src="@drawable/down_arrow"/>
+        </LinearLayout>
+
+
+
+        <EditText
+            android:id="@+id/edit_text_convert"
+            android:layout_width="220dp"
+            android:layout_height="52dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="30dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/rubik"
+            android:ems="16"
+            android:hint="@string/str_convert_amount"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textColorHint="#546E7A"
+            android:gravity="end|center"
+            />
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_convert_to"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:text="@string/convert_to_title"
+        android:fontFamily="@font/rubik"
+        android:textColor="@color/black"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@id/container_currency"
+        app:layout_constraintTop_toBottomOf="@id/container_currency" />
+
+
+    <LinearLayout
+        android:id="@+id/button_select_symbol_to"
+        android:layout_width="80dp"
+        android:layout_height="52dp"
+        android:layout_gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/select_btn_ripple"
+        app:layout_constraintTop_toBottomOf="@id/container_currency"
+        app:layout_constraintEnd_toEndOf="@id/container_currency"
+        app:layout_constraintStart_toEndOf="@id/text_convert_to"
+        android:layout_marginTop="24dp"
+        >
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/button_select_symbol_to_text"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            tools:text="VND"
+            android:fontFamily="@font/rubik"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            />
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="52dp"
+            android:src="@drawable/down_arrow"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/info_log"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="52dp"
+        tools:text="info log"
+        android:padding="10dp"
+        android:fontFamily="@font/rubik"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/text_convert_to"
+        app:layout_constraintStart_toStartOf="@id/text_convert_to"
+        android:background="@drawable/info_box_bg"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
